@@ -2,9 +2,9 @@
   GLOBAL VARIABLE:
 
   nodeJs                      navigator
-  
-
-  global      globalThis      window
+    |                             |
+    |                             |
+  global  --- globalThis  ---  window
 
   from global variable we can access to every functions of javascript.
 */
