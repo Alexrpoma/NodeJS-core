@@ -10,5 +10,11 @@ console.log(
   stats.size + ' bytes'
 )
 
+console.log('\nReading the first file:')
 const read = fs.readFileSync('nativeModules\\fileSystem\\hello.txt', 'utf-8')
 console.log(read)
+
+
+console.log('\nReading the second file')
+const read1 = fs.readFileSync('nativeModules\\fileSystem\\info.txt', 'utf-8')
+console.log(read1)
