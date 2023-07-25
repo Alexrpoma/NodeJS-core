@@ -9,3 +9,6 @@ console.log(
   stats.isSymbolicLink(), //is a symbol link?
   stats.size + ' bytes'
 )
+
+const read = fs.readFileSync('nativeModules\\fileSystem\\hello.txt', 'utf-8')
+console.log(read)
