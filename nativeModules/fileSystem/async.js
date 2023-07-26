@@ -1,19 +1,20 @@
 //Asynchronous
+//Not guarantee the order of results.
 const fs = require('node:fs')
 
-function hello(user) {
-  return 'Hello ' + user;
+function doSomething(something) {
+  return 'Do ' + something;
 }
 
 console.log('Reading the first file:')
-fs.readFile('nativeModules\\fileSystem\\hello.txt', 'utf-8', (error, read) => { // -> CallBack
-  console.log('First file: ' + read)
+fs.readFile('nativeModules\\fileSystem\\firstText.txt', 'utf-8', (error, read) => { // -> CallBack
+  console.log(read)
 })
 
 //Do other functions
-console.log(hello('alex'));
+console.log(doSomething('some work..'));
 
 console.log('Reading the second file:')
-fs.readFile('nativeModules\\fileSystem\\info.txt', 'utf-8', (error, read) => {
-  console.log('Second file:' + read)
+fs.readFile('nativeModules\\fileSystem\\secondText.txt', 'utf-8', (error, read) => {
+  console.log(read)
 })
