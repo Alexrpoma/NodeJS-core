@@ -1,5 +1,7 @@
-//provide us information and control of current executions
- console.log(process.argv)
+//In Nodejs the process provide us information and control of current executions
+
+//nodeJs execution with enter arguments.
+console.log(process.argv)
 
 //Exit process control: 
 //0 -> successfully
@@ -8,11 +10,11 @@ process.exit(0)
 
 //Process events control:
 process.on('exit', () => {
-  //clean resources
+  //some works, example -> clean resources
 })
 
 //Current working directory:
-process.cwd()
+console.log(process.cwd())
 
 //Platform:
 process.env.EXAMPLE
