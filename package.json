@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-core",
+  "version": "1.0.0",
+  "description": "The best NodeJs course!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexrpoma/NodeJS-core.git"
+  },
+  "keywords": [
+    "course",
+    "node",
+    "nodejs",
+    "nodejs-core"
+  ],
+  "author": "Alex Poma - developer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alexrpoma/NodeJS-core/issues"
+  },
+  "homepage": "https://github.com/Alexrpoma/NodeJS-core#readme"
+}
