@@ -1,0 +1,13 @@
+SEMANTIC VERSIONING:
+
+example:
+
+"dependencies": {
+  "my-dependency": "1.0.0"
+}
+
+1.0.0 -> SEMANTIC
+
+X.Y.Z -> X: MAJOR - The most change, when the compatibility change.
+      -> Y: MINOR - A small change, when it added new features.
+      -> Z: PATCH - fix bugs.
