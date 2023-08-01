@@ -1,5 +1,6 @@
 const fs = require('node:fs/promises')
 const path = require('node:path')
+const pColors = require('picocolors')
 
 
 //We can execute this for example with command: node filesDetails.js ../../nativeModules/fileSystem
@@ -11,7 +12,7 @@ async function ls(folder) {
   try {
     files = await fs.readdir(folder);
   } catch {
-    console.log('Cannot read de folder ', folder);
+    console.log(pColors.red('Cannot read de folder ', folder));
     process.exit(1);
   }
 
@@ -22,14 +23,14 @@ async function ls(folder) {
     try {
       stats = await fs.stat(filePath);
     } catch {
-      console.error('Cannot read de file path: ', filePath)
+      console.error(pColors.red('Cannot read de file path: ', filePath))
     }
 
     const isDirectory = stats.isDirectory();
     const fileType = isDirectory ? 'd' : 'f';
     const fileSize = stats.size;
     const fileModified = stats.mtime.toLocaleString();
-    return `${fileType} ${file.padEnd(20)} ${fileSize.toString().padStart(10)} ${fileModified}`;
+    return `${pColors.bold(fileType)} ${pColors.blue(file.padEnd(20))} ${pColors.green(fileSize.toString().padStart(10))} ${pColors.yellow(fileModified)}`;
   })
 
   const filesInfo = await Promise.all(filesPromises);
