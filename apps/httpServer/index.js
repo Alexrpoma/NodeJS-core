@@ -6,13 +6,15 @@ const server = http.createServer((require, response) => {
   response.end('Hello world!')
 })
 
+const portNumber = process.env.PORT ?? 3000
+
 //Random port:
 /* server.listen(0, () => {
   console.log(`server listening on port http://localhost:${server.address().port}`)
 }) */
 
 //Request number port:
-findAvailablePort(3000).then(port => {
+findAvailablePort(portNumber).then(port => {
   server.listen(port, () => {
     console.log(`server listening on port http://localhost:${server.address().port}`)
   })
